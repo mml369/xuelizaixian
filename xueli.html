@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+            padding: 0;
+            margin: 0;
+        }
+        ul,
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .clear {
+        	clear: both;
+        }
+        .all {
+        	width: 1920px;
+        }
+        .header {
+        	height: 101px;
+        }
+        .container {
+   			width: 1200px;
+   			margin: 0 auto;
+   			height: 101px;
+		}
+		.header-left {
+			float: left;
+			line-height: 39px;
+			height: 39px;
+			padding-top: 30px;
+			width:170px;			
+			font-size:40px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:rgba(0,164,255,1);
+		}
+		.header-mid a {
+			font-size:18px;
+			line-height:18px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(5,5,5,1);
+			clear: both;
+		}
+		.header-mid  li {
+		    width: 90px;
+		    text-align: center;
+			float: left;				
+			height:28px;
+			padding-top:42px;  
+		}
+		.header-mid li:hover {
+			border-bottom: 2px solid #00A4FF;
+		}
+		li.first  {
+			margin-left: 55px;
+			border-bottom: 2px solid #00A4FF;
+		}		
+		.header-right {			
+			margin-top: 30px;
+			padding-left: 161px;
+			float: left;
+		}
+		.header_right {
+			float: left;
+			margin-top:44px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			color:rgba(102,102,102,1);
+		}
+		.search {
+			float: left;
+			padding: 13px 272px 12px 30px;
+			width:70px;
+			height:15px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			color:rgba(191,191,191,1);
+			line-height:31px;
+		}
+		.submit {
+			float: left;
+			width: 50px;
+			height: 44px;
+			border: none;
+			margin-right:31px;
+			background:rgba(0,164,255,1) url('images/fa-search.png') no-repeat center center;
+			border: rgba(0,164,255,1) solid 1px;
+		}
+		.form {
+			clear: both;
+		}
+		.banner {
+			background-color: #1C036C;
+			height: 420px;
+			
+		}
+		.img.container {
+			position: relative;
+			background: url('images/banner2.png') no-repeat right center;
+			height: 420px;
+			padding-left: 390px;
+			margin: 0;
+			float: left;
+		}
+		.daoh {			
+			width:190px;
+			height:420px;
+			background:rgba(0, 0, 0, 0.3);
+			float: left;
+			position: absolute;
+			left: 360px;
+			clear: both;
+		}
+		.daoh li {
+			height: 45px;
+			width: 190px;
+			position: relative;
+		}
+		.daoh p {
+			font-size:14px;
+			position: absolute;
+			right: 21px;
+			bottom: 2px;
+			color: white;
+		}
+		.daoh li a {
+			padding: 15px 20px 15px 20px;
+			width:101px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			color:#FFFFFF;
+			line-height:15px;
+			float: left;
+		}
+		.daoh li a:hover {
+			color: rgba(0, 180, 255, 1);
+		}
+		.daoh li:hover p{
+			color: rgba(0, 180, 255, 1);
+		}
+		.nav {
+			background-color:rgba(255, 255, 255, 1);
+			box-shadow:0px 2px 3px 0px rgba(118,118,118,0.2);
+			width: 1200px;
+   			margin: 0 auto;
+			height: 60px;
+			padding-top: 8px;
+		}
+		.nav li {
+			line-height: 60px;
+			float: left;
+
+		}
+		.nav li a {
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			color:#050505;
+			height: 16px;
+		}
+		.part1 {
+			height: 77px;
+			width: 1200px;
+			float: left;
+		}
+		.left {
+			padding-top: 37px;
+			padding-bottom: 21px;
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			color:rgba(73,73,73,1);
+			width: 80px;
+			height: 19px;
+			line-height: 19px;
+			display: inline-block;
+		}
+		.right {
+			float: right;
+			text-align: right;
+			padding-top: 31px;
+			padding-right: 31px;
+			width:48px;
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			color:rgba(165,165,165,1);
+		}
+		.part2 {
+			width: 1215px;
+			height: 570px;
+		}
+		.every1 {
+			width: 228px;
+			height: 270px;
+			margin-right: 15px;
+			margin-bottom: 15px;
+			
+			float: left;
+		}
+		.every1:hover {
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+		}
+		.every1 img {
+			width: 228px;
+			height: 155px;
+		}
+		.every1 p {
+			width: 185px;
+			height: 34px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			color:rgba(5,5,5,1);
+			line-height:20px;
+			padding: 24px 20px 18px 23px;
+		}
+		.span1 {
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			color:#FF7C2D;
+			padding-left: 23px;
+		}
+		.span2 {
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			color:#999999;
+		}
+		.part3 {
+			width: 1200px;
+			height: 62px;
+		}
+		.part3-mid {
+			width: 500px;
+			height: 62px;
+			float: left;
+			margin-left: 266px;
+		}
+		.part3-mid  li {
+		    width: 105px;
+		    text-align: center;
+			float: left;				
+			height:17px;
+			padding-top:26px;  
+		}
+		.part3-mid a {
+			font-size:18px;
+			line-height:18px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(134, 134, 134, 1);
+		}
+		.part3-mid li:hover a {
+			color: rgba(0, 164, 255, 1);
+		}
+		.left1 {
+			float: left;
+			width:140px;
+			height:19px;
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			color:rgba(73,73,73,1);
+			padding-top: 22px;
+			padding-bottom: 21px;
+			line-height: 19px;
+		}
+		.right1 {
+			float: right;
+			text-align: right;
+			padding-top: 14px;
+			padding-right: 31px;
+			width:48px;
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			color:rgba(165,165,165,1);
+		}	
+		.part4 {
+			width: 1215px;
+			height: 285px;
+		}	
+		.part5 {
+			width: 1200px;
+			height: 72px;
+		}
+		.part5 p {
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			color:rgba(73,73,73,1);
+			padding-top: 20px;
+			height: 19px;
+			line-height: 19px;
+		}
+		.part6 {
+			width: 1215px;
+			height: 320px;
+		}
+		.part6 img {
+			float: left;
+			padding-right: 15px;
+		}
+		.every2 {
+			width: 228px;
+			height: 320px;
+			position: relative;
+			display: inline-block;
+		}
+		.big {
+			position: relative;
+			width: 486px;
+			height: 320px;
+			display: inline-block;
+			float: left;
+		}
+		.little {
+			width: 243px;
+			height: 320px;
+			display: inline-block;
+			position: relative;
+			float: left;
+		}
+		.con {
+			position: absolute;
+			top: 99px;
+			left: 25px;
+			margin-bottom: 12px;
+			width: 163px;
+			height: 62px;
+		}
+		.con a {
+			width:87px;
+			height:25px;
+			line-height: 25px;
+			color: #F9E103;
+			font: 13px MicrosoftYaHei;
+			position: absolute;
+			top: 85px;
+			left: 7px;
+			border: 2px solid #F9E103;
+			padding-top:5px;
+			text-align: center;
+			display: block;			
+		}
+		.every2 img {
+			width: 228px;
+			height: 320px;
+		}
+		.back {
+			width:228px;
+			height:122px;
+			background:rgba(0,0,0,0.5);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.little p {
+			width: 175px;
+			height: 53px;
+			position: absolute;
+			bottom: 18px;
+			left: 25px;
+
+		}
+		.name {
+			color: rgba(255, 255, 255, 1);
+			font:bold 18px MicrosoftYaHei-Bold;
+			position: absolute;
+			top:21px;
+			left: 29px;
+		}
+		.job {
+		    color: rgba(255,255,255,1);
+			font: 14px MicrosoftYaHei;
+			position: absolute;
+			left: 95px;
+			top:25px;
+		}
+		.intro {
+			color: rgba(255, 255, 255, 1);
+			font:12px MicrosoftYaHei;
+		}
+		.bottom {
+			width:1917px;
+			height:417px;
+			background:rgba(255,255,255,1);
+			clear: both;
+			padding-top: 73px;
+			position: relative;
+		}
+		.xueli1 {
+			color: rgba(0, 164, 255, 1);
+			font:bold 36px MicrosoftYaHei-Bold;
+			position: absolute;
+			top:124px;
+			left: 380px;
+		}
+		.xueli2 {
+			color: rgba(102, 102, 102, 1);
+			font:12px SimSun;
+			position: absolute;
+			top:195px;
+			left: 382px;"
+		}
+		.xueli3 {
+			color: rgba(0, 164, 255, 1);
+			font:16px MicrosoftYaHei;
+			width:120px;
+			height:36px;
+			line-height: 36px;
+			text-align: center;
+			border: 2px solid rgba(0, 164, 255, 1);
+			position: absolute;
+			top:251px;left: 408px;
+		}
+		.bottom ul a {
+			font: 12px SimSun;
+			color: rgba(51, 51, 51, 1);
+		}
+		.web {
+			position: absolute;
+			top: 161px;
+			left: 1027px;
+		}
+		.new {
+			position: absolute;
+			top: 161px;
+			left: 1251px;
+		}
+		.pant {
+			position: absolute;
+			top: 161px;
+			left: 1469px;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="header">
+			<div class="container">	
+				<div class="header-left">雪梨在线</div>
+				<div class="header-mid">
+					<ul>
+						<li class="first"><a href="">首页</a></li>
+						<li><a href="">课程</a></li>
+						<li><a href="">职业规划</a></li>
+					</ul>
+				</div>
+				<div class="header-right">
+					<form class="form"> 
+	                    <input type="text" placeholder="输入关键词" class="search"  />
+	                    <input type="button" class="submit" />                 
+	                </form>
+	            </div>
+	                <div class="header_right">个人中心</div>      			
+			</div>
+			<div class="banner">
+				<ul>
+					<li class="container img"></li>
+
+			    </ul>	
+				<ul class="daoh">
+					<li>
+						<a href="#" style="padding-top: 27px;">前端开发</a>
+						<p>></p>
+					</li>
+						<li ><a href="#" >后端开发</a>
+						<p>></p>
+					</li>
+					<li >
+						<a href="#" >移动开发</a>
+						<p>></p>
+					</li>
+					<li>
+						<a href="#">人工智能</a>
+						<p>></p></li>
+					<li>
+						<a href="#">商业预测</a>
+						<p>></p></li>
+					<li>
+						<a href="#">云计算&大数据</a>
+						<p>></p></li>
+					<li>
+						<a href="#">运维&从测试</a>
+						<p>></p></li>
+					<li>
+						<a href="#">UI设计</a>
+						<p>></p></li>
+					<li>
+						<a href="#">产品</a>
+						<p>></p>
+					</li>
+				</ul>
+			</div>
+			<div class="nav">
+				<ul class="container clear" style="height:60px;">
+					<li id="one"><a href="" style="color: #00A4FF;padding-left: 34px;padding-right:34px;border: none;font-weight:bold;">精品推荐</a></li>
+					<li style="width: 122px;"><a href="" style="padding-left:32px;border-left: 1px solid #BFBFBF;">IQuery</a></li>
+					<li style="width: 116px;"><a href="" style="padding-left:28px;border-left: 1px solid #BFBFBF;">Spark</a></li>
+					<li style="width: 123px;"><a href="" style="padding-left:22px;border-left: 1px solid #BFBFBF;">MySQL</a></li>
+					<li style="width: 133px;"><a href="" style="padding-left:18px;border-left: 1px solid #BFBFBF;">JavaWeb</a></li>
+					<li style="width: 124px;"><a href="" style="padding-left:19px;border-left: 1px solid #BFBFBF;">MySQL</a></li>
+					<li style="width: 128px;"><a href="" style="padding-left:15px;border-left: 1px solid #BFBFBF;">JavaWeb</a></li>
+					<li style="width: 300px;" class="last"><a href="" style="color: #00A4FF;padding-left:200px;width: 60px;">修改兴趣</a></li>
+				</ul>
+			</div>		
+		</div>
+		<div class="middle container clear">
+			<div class="part1 clear">
+				<span class="left">精品推荐</span>
+				<span class="right">查看全部</span>
+			</div>
+			<div class="part2 clear">
+				<div class="every1">
+					<img src="images/1.png" alt="">
+					<p>Think PHP 5.0 博客系统实战项目训练</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/2.png" alt="">
+					<p>Android 网络图片加载框架详解</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/3.png" alt="">
+					<p>Angular 2 最新框架+主流技术+项目实战</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/4.png" alt="">
+					<p>Android Hybird APP开发实战 H5+原生！</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/4.png" alt="">
+					<p>Android Hybird APP开发实战 H5+原生！</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/1.png" alt="">
+					<p>Think PHP 5.0 博客系统实战项目训练</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/2.png" alt="">
+					<p>Android 网络图片加载框架详解</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/3.png" alt="">
+					<p>Angular 2 最新框架+主流技术+项目实战</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/4.png" alt="">
+					<p>Android Hybird APP开发实战 H5+原生！</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/4.png" alt="">
+					<p>Android Hybird APP开发实战 H5+原生！</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+			</div>
+			<div class="part3">
+				<div class="left1">前端开发工程师</div>
+				<div class="part3-mid">
+					<ul>
+						<li><a href="" style="color: rgba(0, 164, 255, 1)" >热门</a></li>
+						<li><a href="">初级</a></li>
+						<li><a href="">中级</a></li>
+						<li><a href="">高级</a></li>
+					</ul>
+				</div>
+				<span class="right1">查看全部</span>
+			</div>
+			<div class="part4">
+				<div class="every1">
+					<img src="images/5.png" alt="">
+					<p>微软人工智能-数据分析平台</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/6.png" alt="">
+					<p>Unity Profiler入门</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/7.png" alt="">
+					<p>Cocos2d-x  引擎源码中的纹理优化</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/8.png" alt="">
+					<p>Kami2首页界面切换效果</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+				<div class="every1">
+					<img src="images/9.png" alt="">
+					<p>Android Hybrid APP开发实战 H5+原生！</p>
+					<span class="span1">高级</span>
+					<span class="span2">· 1125人在学习</span>
+				</div>
+			</div>
+			<div class="part5">
+				<p>牛人推荐</p>
+			</div>
+			<div class="part6">
+				<div class="big">
+					<img src="images/10.png" alt="">
+					<div class="con">
+						<p style="color: rgba(249, 225, 3, 1);font-size: 30px;font-weight: bold;">毕业季</p>
+						<p style="color: #FFFFFF;font-size: 27px MicrosoftYaHei;">带你华丽转身</p>
+						<a href="#" class="but">点击查看</a>
+					</div>					
+				</div>
+				<div class="little ">
+					<img src="images/A_1.png" alt="" class="every2">
+					<div class="back">
+						<div class="name" >闻老师</div>
+						<div class="job">大数据</div>
+						<p class="intro">高级互联网软件工程师，曾担任某物流公司CRM开发团队TL。多年JAVAEE、大数据领域研发……</p>
+					</div>
+				</div>
+				<div class="little">
+				    <img src="images/A_2.png" alt="" class="every2">
+					<div class="back">
+						<div class="name">汪老师</div>
+						<div class="job">前端</div>
+						<p class="intro">高级软件架构师，全栈开发，多年大型项目管理经验。对Web Components、Node.js……</p>
+					</div>
+				</div>
+			    <div class="little">
+				    <img src="images/A_3.png" alt="" class="every2">
+				    <div class="back">
+						<div class="name">江老师</div>
+						<div class="job">前端</div>
+						<p class="intro">多年软件开发经验和教学经验，精通html，css，js,asp.net等编程语言和数据库系统……</p>
+					</div>
+			    </div>
+			</div>	
+		</div>
+		<div class="bottom">
+			<div class="container" style="height: 417px;">
+				<p class="xueli1">雪梨在线</p>
+				<p class="xueli2">致力于普及中国最好的教育,与中国一流大学和机构合作提供在线课程。</p>	
+				<a class="xueli3" href="#" >下载APP</a>
+			</div>
+			<p style="font:16px MicrosoftYaHei;color: rgba(51, 51, 51, 1);position: absolute;top:129px;left: 1026px;">关于雪梨网</p>
+			<ul class="web">
+				<li><a href="#">关于</a></li>
+				<li><a href="#">管理团队</a></li>
+				<li><a href="#">工作机会</a></li>
+				<li><a href="#">客户服务</a></li>
+				<li><a href="#">帮助</a></li>
+			</ul>
+			<p style="font:16px MicrosoftYaHei;color: rgba(51, 51, 51, 1);position: absolute;top:130px;left: 1251px;">新手指南</p>
+			<ul class="new">
+				<li><a href="#">如何注册</a></li>
+				<li><a href="#">如何选课</a></li>
+				<li><a href="#">如何拿到毕业证</a></li>
+				<li><a href="#">学分是什么</a></li>
+				<li><a href="#">考试未通过怎么办</a></li>
+			</ul>
+			<p style="font:16px MicrosoftYaHei;color: rgba(51, 51, 51, 1);position: absolute;top:130px;left: 1467px;">合作伙伴</p>
+			<ul class="pant">
+				<li><a href="#">合作机构</a></li>
+				<li><a href="#">合作导师</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
